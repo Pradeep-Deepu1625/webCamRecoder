@@ -25,6 +25,7 @@ function App(){
   },[dispatch]);
   const createUser = useCallback(async()=>{
     const  users = await axios.post("http://localhost:5000/API/project",state).then((res)=>{
+      console.log(res)
       return res;
     }).catch((err)=>{
       return err
